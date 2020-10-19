@@ -9,7 +9,7 @@ import {
 //Private
 function _draw() {
   let template = ""
-  ProxyState.questions.forEach(q => template += q.Template)
+  template = ProxyState.question.Template
   document.getElementById("question").innerHTML = template
   console.log("Question");
 }
@@ -17,8 +17,8 @@ function _draw() {
 //Public
 export default class QuestionController {
   constructor() {
-    ProxyState.on("questions", _draw);
-    _draw()
+    ProxyState.on("question", _draw);
+    // _draw()
   }
 
   getQuestion() {

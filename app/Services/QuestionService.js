@@ -9,13 +9,14 @@ import {
 class QuestionService {
   constructor() {
     console.log("Service");
+    this.getQuestion()
   }
 
   getQuestion() {
-    console.log(ProxyState.questions);
-    api.get("question").then(res => {
-      console.log("request is back!", res.data);
-      ProxyState.questions = res.data.results.map(rawQuestionData => new Question(rawQuestionData))
+    console.log(ProxyState.question);
+    api.get().then(res => {
+      console.log("request is back!", res.data[0]);
+      ProxyState.question = new Question(res.data[0])
     }).catch(err => console.error(err))
 
   }
