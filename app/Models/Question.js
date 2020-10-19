@@ -8,7 +8,7 @@ export default class Question {
     get Template() {
 
         return /*html*/ `
-        <div class="card p-2 question">
+        <div class="col-6 border rounded shadow-lg">
             <h1>${this.question}</h1>
             <h5>${this.answer}</h5>
         </div>
