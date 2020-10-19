@@ -23,6 +23,7 @@ class QuestionService {
     }).catch(err => console.error(err))
 
   }
+
 }
 
 export const questionService = new QuestionService();

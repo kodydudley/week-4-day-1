@@ -6,8 +6,8 @@ export default class Answer {
 
   get answerTemplate() {
     return /*html*/ `
-      <div class="col border rounded shadow-lg">
-          <h5>${this.answer}</h5>
+      <div class="col bg-light border rounded shadow-lg">
+          <h1>${this.answer}</h1>
       </div>
       `
   }
