@@ -18,7 +18,7 @@ function _draw() {
 export default class QuestionController {
   constructor() {
     ProxyState.on("question", _draw);
-    // _draw()
+
   }
 
   getQuestion() {

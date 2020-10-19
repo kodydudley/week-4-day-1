@@ -8,9 +8,10 @@ export default class Question {
     get Template() {
 
         return /*html*/ `
-        <div class="col-6 border rounded shadow-lg">
-            <h1>${this.question}</h1>
-            <h5>${this.answer}</h5>
+        <div class="row">
+            <div class="col border rounded shadow-lg">
+                <h1>${this.question}</h1>
+            </div>
         </div>
         `
     }

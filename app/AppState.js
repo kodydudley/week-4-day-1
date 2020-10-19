@@ -1,3 +1,4 @@
+import Answer from "./Models/Answer.js"
 import Question from "./Models/Question.js"
 import {
   EventEmitter
@@ -9,6 +10,9 @@ import {
 class AppState extends EventEmitter {
   /** @type {Question} */
   question = null
+
+  /** @type {Answer} */
+  answer = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {
